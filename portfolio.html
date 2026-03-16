@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rod Salmeo | AI-Powered Virtual Assistant</title>
-    <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <script>
@@ -27,12 +24,6 @@
         .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-        
-        /* Chatbot Styles */
-        #chatbot-window { display: none; transition: all 0.3s ease-in-out; }
-        .chat-bubble-user { background-color: #3b82f6; color: white; border-radius: 15px 15px 0px 15px; padding: 10px 15px; margin-bottom: 10px; max-width: 80%; align-self: flex-end; font-size: 0.9rem;}
-        .chat-bubble-ai { background-color: #1e293b; color: #cbd5e1; border-radius: 15px 15px 15px 0px; padding: 10px 15px; margin-bottom: 10px; max-width: 80%; align-self: flex-start; font-size: 0.9rem; border: 1px solid #334155;}
-        .chat-container { display: flex; flex-direction: column; }
     </style>
 </head>
 <body class="antialiased selection:bg-primary selection:text-white pb-20">
@@ -104,7 +95,6 @@
                     <p class="text-gray-400 text-sm mb-6">A fully functional Streamlit web app that utilizes the Groq API to parse raw text and generate perfectly formatted, ATS-compliant Harvard-style PDF resumes.</p>
                 </div>
                 <div class="flex gap-4 text-sm font-semibold border-t border-slate-700 pt-4 mt-auto">
-                    <!-- Note: Update the link below to your actual Streamlit URL -->
                     <a href="https://harvard-resume-app.streamlit.app" target="_blank" class="bg-primary text-white px-3 py-1.5 rounded-lg hover:bg-blue-600"><i class="fa-solid fa-play mr-1"></i> Live App</a>
                     <a href="https://github.com/jcsuarezmill/harvard-resume-app" target="_blank" class="text-gray-300 hover:text-white py-1.5"><i class="fa-brands fa-github mr-1"></i> Code</a>
                 </div>
@@ -118,7 +108,6 @@
                     <p class="text-gray-400 text-sm mb-6">An interactive web application designed to help users practice and learn Spanish using AI-driven conversations and language exercises.</p>
                 </div>
                 <div class="flex gap-4 text-sm font-semibold border-t border-slate-700 pt-4 mt-auto">
-                    <!-- Note: Update the link below to your actual Streamlit URL -->
                     <a href="https://spanish-tutor-web.streamlit.app" target="_blank" class="bg-primary text-white px-3 py-1.5 rounded-lg hover:bg-blue-600"><i class="fa-solid fa-play mr-1"></i> Live App</a>
                     <a href="https://github.com/jcsuarezmill/spanish-tutor-web" target="_blank" class="text-gray-300 hover:text-white py-1.5"><i class="fa-brands fa-github mr-1"></i> Code</a>
                 </div>
@@ -132,7 +121,6 @@
                     <p class="text-gray-400 text-sm mb-6">An educational Streamlit application focused on improving English reading comprehension and proficiency for non-native speakers.</p>
                 </div>
                 <div class="flex gap-4 text-sm font-semibold border-t border-slate-700 pt-4 mt-auto">
-                    <!-- Note: Update the link below to your actual Streamlit URL -->
                     <a href="https://englishreading.streamlit.app" target="_blank" class="bg-primary text-white px-3 py-1.5 rounded-lg hover:bg-blue-600"><i class="fa-solid fa-play mr-1"></i> Live App</a>
                     <a href="https://github.com/jcsuarezmill/englishreading" target="_blank" class="text-gray-300 hover:text-white py-1.5"><i class="fa-brands fa-github mr-1"></i> Code</a>
                 </div>
@@ -177,115 +165,23 @@
         </div>
     </section>
 
-    <!-- FLOATING AI CHATBOT -->
+    <!-- SECURE FLOATING AI CHATBOT LINK -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-        <!-- Chat Window -->
-        <div id="chatbot-window" class="glass-card w-80 h-96 mb-4 rounded-2xl flex flex-col overflow-hidden shadow-2xl shadow-blue-500/20 border border-slate-600">
-            <div class="bg-slate-800 py-3 px-4 flex justify-between items-center border-b border-slate-700">
-                <span class="font-bold text-white"><i class="fa-solid fa-robot text-primary mr-2"></i>Rod's AI Assistant</span>
-                <button onclick="toggleChat()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            
-            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto chat-container flex flex-col bg-darker/50">
-                <div class="chat-bubble-ai">
-                    Hi! I'm Rod's AI assistant powered by Groq. Ask me anything about his skills, projects, or experience!
-                </div>
-            </div>
-            
-            <div class="p-3 bg-slate-800 border-t border-slate-700 flex">
-                <input type="text" id="chat-input" placeholder="Ask a question..." class="flex-1 bg-slate-700 text-white rounded-l-lg px-3 py-2 outline-none border border-slate-600 focus:border-primary text-sm" onkeypress="handleKeyPress(event)">
-                <button onclick="sendMessage()" class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-blue-600 transition">
-                    <i class="fa-solid fa-paper-plane"></i>
-                </button>
-            </div>
+        <div class="bg-slate-800 text-white text-xs px-3 py-1 rounded-full mb-2 shadow-lg border border-slate-600 animate-bounce">
+            Chat with my AI! 👋
         </div>
-        
-        <!-- Chat Toggle Button -->
-        <button onclick="toggleChat()" class="bg-primary hover:bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg shadow-blue-500/40 flex items-center justify-center text-2xl transition transform hover:scale-110">
-            <i class="fa-solid fa-message"></i>
-        </button>
+        <!-- TO DO: Update this link to your new Streamlit Chatbot URL once you deploy it! -->
+        <a href="https://your-chatbot-url.streamlit.app" target="_blank" class="bg-primary hover:bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg shadow-blue-500/40 flex items-center justify-center text-2xl transition transform hover:scale-110">
+            <i class="fa-solid fa-robot"></i>
+        </a>
     </div>
 
     <script>
-        // --- Scroll Animations ---
+        // Scroll Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
-
-        // --- Chatbot Logic ---
-        // WARNING: This exposes your API key to anyone who inspects the website source code. 
-        // In a production environment, this should be routed through a backend server.
-        const GROQ_API_KEY = "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"; 
-
-        function toggleChat() {
-            const chatWindow = document.getElementById('chatbot-window');
-            chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
-        }
-
-        function handleKeyPress(e) {
-            if (e.key === 'Enter') sendMessage();
-        }
-
-        async function sendMessage() {
-            const inputField = document.getElementById('chat-input');
-            const messageText = inputField.value.trim();
-            if (!messageText) return;
-
-            // 1. Show user message
-            addMessageToUI(messageText, 'user');
-            inputField.value = '';
-
-            // 2. Show loading dots
-            const chatMessages = document.getElementById('chat-messages');
-            const loadingId = "loading-" + Date.now();
-            chatMessages.insertAdjacentHTML('beforeend', `<div id="${loadingId}" class="chat-bubble-ai">...</div>`);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-
-            // 3. Call Groq API
-            try {
-                const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': `Bearer ${GROQ_API_KEY}`,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        model: "llama3-8b-8192", // Using smaller model for insanely fast web chat
-                        messages:[
-                            {
-                                role: "system", 
-                                content: "You are the helpful AI assistant for Rod Salmeo. Rod is a highly skilled Virtual Assistant from the Philippines who builds AI apps in Streamlit/Python, speaks C2 English, does Web3 community management, and offers top-tier Zendesk tech support. Answer questions about him confidently and briefly (1-2 short sentences maximum). Direct people to email him at varodsalm@gmail.com for inquiries."
-                            },
-                            {
-                                role: "user", 
-                                content: messageText
-                            }
-                        ]
-                    })
-                });
-
-                const data = await response.json();
-                document.getElementById(loadingId).remove(); // Remove loading dots
-                
-                if (data.choices && data.choices.length > 0) {
-                    addMessageToUI(data.choices[0].message.content, 'ai');
-                } else {
-                    addMessageToUI("Sorry, I'm having trouble connecting to my brain right now.", 'ai');
-                }
-            } catch (error) {
-                document.getElementById(loadingId).remove();
-                addMessageToUI("Error connecting to Groq API.", 'ai');
-            }
-        }
-
-        function addMessageToUI(text, sender) {
-            const chatMessages = document.getElementById('chat-messages');
-            const bubbleClass = sender === 'user' ? 'chat-bubble-user' : 'chat-bubble-ai';
-            const html = `<div class="${bubbleClass}">${text}</div>`;
-            chatMessages.insertAdjacentHTML('beforeend', html);
-            chatMessages.scrollTop = chatMessages.scrollHeight; // Auto-scroll to bottom
-        }
     </script>
 </body>
 </html>
